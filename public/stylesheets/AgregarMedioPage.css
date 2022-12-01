@@ -1,0 +1,57 @@
+/* AGREGAFR MEDIO INICIO */
+.agregarmedios{
+    display: flex;
+    gap:12px;
+}
+
+.agregarmedios div {
+    width: 100%;
+}
+
+.frmagregarmedio p {
+    /*display: flex;*/
+    margin-left:20px;
+    
+   
+}
+
+.frmagregarmedio p label{
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.frmagregarmedio p input{
+    min-width: 80px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.frmagregarmedio p:nth-child(7){
+    align-items: start;
+}
+
+.frmagregarmedio textarea {
+    resize: none;
+    height: 150px;
+    width: 50%;
+}
+
+.frmagregarmedio input[type="submit"] {
+    background: #6da9ed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative;
+    left: 12.5rem;
+    cursor: pointer;
+}
+
+.frmagregarmedio input[type="submit"]:hover {
+    background-color: #2e64a1;
+}
+
+/* AGREGAR MEDIO FIN */

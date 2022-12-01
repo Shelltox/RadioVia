@@ -1,0 +1,55 @@
+<main className="holder agregarmedios">
+        <div>
+            <h2>Modificar Medio</h2>
+            <p>Modificar los datos en el formulario para indexar tu medio preferido (Radio/Diario/Television)</p>
+
+            <div>
+                {{#if error}}
+                    <h5 style="color: red;">{{mensaje}}</h5>
+                {{/if }}
+            </div>
+
+            <form action="/admin/AgregarMedioPage/AgregarMedioPageModificar" 
+                  method="POST" 
+                  class="frmagregarmedio"
+                  enctype="multipart/form-data"> <!-- enviará los archivos que incluyamos los Logos-->
+                
+                
+                <p><label for="Logo">Logo</label>
+                    <input type="file" name="Logo"/>
+                </p>
+                <p><label> ¿Eliminar la Imagen Actual?</label>
+                    <input type="checkbox" name="img_delete" value='1'/>
+                </p>
+                <p><label for="nombre">Nombre del Medio</label>
+                    <input type="text" name="Descripcion"value="{{Datos.Descripcion}}" />
+                </p>
+                <p><label for="email">Email</label>
+                    <input type="text" name="Email" value="{{Datos.Email}}"/>
+                </p>
+                <p><label for="telefono">WhatsApp</label>
+                    <input type="text" name="WhatsApp" value="{{Datos.WhatsApp}}"/>
+                </p>
+                <p><label for="telefono">URL</label>
+                    <input type="text" name="URL"value="{{Datos.URL}}" />
+                </p>
+                <p><label for="telefono">Link Winamp</label>
+                    <input type="text" name="LinkWinamp" value="{{Datos.LinkWinamp}}"/>
+                </p>
+                <p><label for="telefono">Link Windows Media Player</label>
+                    <input type="text" name="LinkWMP" value="{{Datos.LinkWMP}}"/>
+                </p>
+                <p><label for="mensaje">Comentarios</label>
+                    <textarea name="Comentarios">{{Datos.Comentarios}}</textarea> <!-- style="display:none"  -->
+                </p>
+                <!-- CAMPOS INVISIBLES -->
+                <input type="hidden" name="FchHoraAlta" value=""/> 
+                <input type="hidden" name="IdUsuario" value="{{UserId}}"/>
+                <input type="hidden" name="IdMedio" value="{{Datos.IdMedio}}"></input>
+                <input type="hidden" name="img_original" value="{{Datos.Logo}}"></input>
+
+                <p><input type="submit" value="Guardar"/></p>
+            </form>
+        </div>
+        
+    </main>
